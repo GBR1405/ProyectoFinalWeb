@@ -1,9 +1,40 @@
-.Title{
-    font-size: 3em;
-    color: red;
+
+
+/* Estilos para la barra de navegación lateral */
+.navbar {
+    width: 280px; /* Ancho de la barra */
+    height: 100vh; /* Altura completa de la vista */
+    background-color: #343a40; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
 }
-.TextV{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+
+/* Estilos para el título y el administrador */
+.navbar h2, .navbar p {
+    margin-bottom: 20px; /* Espaciado debajo del título y el párrafo */
+}
+
+/* Estilos para la lista de elementos */
+.navbar ul {
+    list-style: none; /* Remover estilos de lista */
+    padding: 0; /* Remover espaciado interno */
+    margin: 0; /* Remover márgenes */
+}
+
+/* Estilos para cada elemento de la lista */
+.navbar li {
+    padding: 10px 0; /* Espaciado vertical */
+    border-bottom: 1px solid #495057; /* Línea separadora */
+}
+
+/* Estilos para el botón de cerrar sesión */
+.navbar button {
+    width: 100%; /* Ancho completo */
+    background-color: #dc3545; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Remover borde */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 20px; /* Espaciado superior */
+    cursor: pointer; /* Cursor de mano al pasar el ratón */
 }
 

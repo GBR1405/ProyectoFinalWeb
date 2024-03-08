@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+        
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>TicoAsia</title>
+    </head>
+    <body>
+        <nav th:fragment="header">
+            <div class="d-flex">
+                <div class="flex-shrink-0 p-3 bg-dark" style="width: 280px; height: 100vh;">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-light text-decoration-none border-bottom">
+                        <span class="fs-5 fw-semibold">TicoAsia</span>
+                    </a>
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                                Administrador
+                            </button>
+                            <div class="collapse show" id="home-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="@{/usarios}" class="link-light rounded">Usuarios</a></li>
+                                    <li><a href="@{/ordenLoca}" class="link-light rounded">Orden Local</a></li>
+                                    <li><a href="@{/pedidos}" class="link-light rounded">Pedidos</a></li>
+                                    <li><a href="@{/mensajes}" class="link-light rounded">Mensajes</a></li>
+                                    <li><a href="@{/comentarios}" class="link-light rounded">Comentarios</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="border-top my-3"></li>
+                        <li class="mb-1">
+                            <button class="btn btn-danger" type="button">Cerrar Sesión</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-example-divider"></div>
+                <!-- Aquí va el contenido principal de tu página -->
+            </div>
+        </nav>
+    </body>
+</html>
+
