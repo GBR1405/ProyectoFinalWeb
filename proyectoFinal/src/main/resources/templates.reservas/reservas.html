@@ -1,32 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        <title>Reservas</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Bienvenid@, ¿Cuál mesa te gustaría ordenar? </title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jomhuria" rel="stylesheet">
+        <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/webjars/font-awesome/css/all.css" rel="stylesheet"/>
+        <style>
+            .Title {
+                font-family: 'Jomhuria';
+                font-size: 4.5em;
+                color: #ff6666;
+                margin: 0;
+                padding: 0;
+            }
+            .vertical-text {
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                color: yellow;
+            }
+            .nav-style{
+                font-family: 'Jomhuria';
+                font-size: 2em;
+            }
+        </style>
     </head>
     <body>
-        <div class="container">
-            <h1>Reserva de Mesa - Restaurante</h1>
-            <form id="reservationForm">
-                <div class="mb-3">
-                    <label for="fullName" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="fullName" name="fullName" required>
+
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+                <div class="container">
+                    <a th:href="@{/}" class="navbar-brand Title">TicoAsia</a>
+                    <div class="vertical-text">品味轩</div> <!-- Texto chino vertical -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item px-2"><a class="nav-link nav-style" th:href="@{/pedir}">Pedir</a></li>
+                            <li class="nav-item px-2"><a class="nav-link nav-style" th:href="@{/menu}">Menú</a></li>
+                            <li class="nav-item px-2"><a class="nav-link nav-style" th:href="@{/reservas}">Reservas</a></li>
+                            <li class="nav-item px-2"><a class="nav-link nav-style" th:href="@{/afiliarse}">Afiliarse</a></li>
+                            <li class="nav-item px-2"><a class="nav-link nav-style" th:href="@{/nosotros}">Nosotros</a></li>
+                            <li class="nav-item px-2"><a class="nav-link nav-style" th:href="@{/iniciar_sesion}">Iniciar Sesión</a></li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle nav-style" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Idioma
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" th:href="@{/(lang=es)}">ES</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/(lang=en)}">EN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <h2 class="text-center mb-4">Formulario de Reservas</h2>
+                        <form th:action="@{/reservas}" th:object="${reserva}" method="post">
+                            <div class="mb-3">
+                                <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombreCompleto" th:field="*{nombreCompleto}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correoElectronico" th:field="*{correoElectronico}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cantidadPersonas" class="form-label">Cantidad de Personas</label>
+                                <input type="number" class="form-control" id="cantidadPersonas" th:field="*{cantidadPersonas}">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Confirmar</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="partySize" class="form-label">Cantidad de Personas</label>
-                    <input type="number" class="form-control" id="partySize" name="partySize" min="1" required>
+            </div>
+        </main>
+
+        <footer>
+            <div class="bg-black mt-3 p-1 text-white">
+                <div class="container">
+                    <div class="col">
+                        <p class="lead text-center">&COPY; Derechos reservados TicoAsia 2024</p>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Confirmar</button>
-            </form>
-        </div>
+            </div>
+        </footer>
+
+        <script src="/js/rutinas.js"></script>
+        <script src="/webjars/jquery/jquery.min.js"></script>
+        <script src="/webjars/popper.js/umd/popper.min.js"></script>
+        <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
     </body>
-    <footer>Aún por terminar</footer>
-    
 </html>
