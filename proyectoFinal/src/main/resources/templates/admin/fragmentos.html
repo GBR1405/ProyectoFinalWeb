@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <title>TicoAsia</title>
+        <meta charset="UTF-8"/>
+        <link href="https://fonts.googleapis.com/css?family=Jomhuria" rel="stylesheet">
+            <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+            <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+            <script th:src="@{/js/rutinas.js}"></script>   
+            <script th:src="@{/webjars/jquery/jquery.min.js}"></script>   
+            <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script> 
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+
+    </head>
+    <body>
+        <nav th:fragment="admin">
+            <header class="header bg-dark">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                    TicoAsia
+                </button>
+            </header>
+            <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+                <div class="offcanvas-header">
+                    <a th:href="@{/}" class="navbar-brand Title">TicoAsia</a>
+                    <div class="vertical-text">品味轩</div>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a th:href="@{/cateogira}" class="nav-link">Categorias</a></li>
+                        <li class="nav-item"><a th:href="@{/producto}" class="nav-link">Productos</a></li>
+                        <li class="nav-item"><a th:href="@{/usuario}" class="nav-link">Usuarios</a></li>
+                        <li class="nav-item"><a th:href="@{/ordenlocal}" class="nav-link">Orden Local</a></li>
+                        <li class="nav-item"><a th:href="@{/pedidos}" class="nav-link">Pedidos</a></li>
+                        <li class="nav-item"><a th:href="@{/mensajes}" class="nav-link">Mensajes</a></li>
+                        <li class="nav-item"><a th:href="@{/comentarios}" class="nav-link">Comentarios</a></li>
+                    </ul>
+                    <button class="btn btn-danger mt-3">Cerrar Sesión</button>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="flex-grow-1 p-3">
+            <section th:fragment="listadoArbol" id="Arbol">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Listado de arboles</h4>
+                                </div>
+                                <div th:if="${arboles != null and !arboles.empty}">
+                                    <table class="table table-striped table-hover">
+                                        <thead class="table-dark">
+                                            <tr><th>#</th>
+                                                <th>Nombre</th>
+                                                <th>Tipo Flor</th>
+                                                <th>Dureza</th>
+                                                <th>Cantidad</th>
+                                                <th>Estado</th>
+                                                <th></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr th:each="arbol, contador : ${arboles}">
+                                                <td>[[${contador.count}]]</td>
+                                                <td>[[${arbol.nombre}]]</td> 
+                                                <td>[[${arbol.tipoFlor}]]</td>
+                                                <td>[[${arbol.durezaMadera}]]</td> 
+                                                <td>[[${arbol.cantidad}]]</td>
+                                                <td th:text="${arbol.estado} ? 'Activa' : 'Inactiva'" />
+                                                <td>
+                                                    <a th:href="@{/arbol/eliminar/}+${arbol.idArbol}" class="btn btn-danger">
+                                                        <i class="fas fa-trash"></i> Eliminar
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        </div>
+
+    </body>
+</html>
