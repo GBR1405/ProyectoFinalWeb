@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>OneTree</title>
+         <link href="https://fonts.googleapis.com/css?family=Jomhuria" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap" rel="stylesheet">
+        <style>
+            .jomhuria-font {
+                font-family: 'Jomhuria', cursive;
+                font-size: 5em;
+                color: #ff6666;
+            }
+
+            .jim-nightshade-font {
+                font-family: 'Jim Nightshade', cursive;
+                font-size: 3em;
+            }
+
+            .red-button {
+                background-color: red;
+                color: white;
+                border: none;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            .section-content {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            #test {
+                background-image: url('https://i.postimg.cc/K8WMcM47/image.png');
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <section th:fragment="test" id="test">
+            <section style="background-image: url('https://i.postimg.cc/K8WMcM47/image.png'); background-size: cover; background-position: center; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; color: white;">
+                <div class="section-content">
+                    <h2 class="jomhuria-font">Visite nuestro restaurante</h2>
+                    <p class="jim-nightshade-font">Comida asiática estilo chino-costarricense</p>
+                    <a href="@{/menu}" class="red-button">Ver nuestro menú</a>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>

@@ -6,10 +6,14 @@
         <title>OneTree</title>
     </head>
     <body>
-        <header th:replace="~{layout/plantilla :: header}"/> 
         
+        <nav th:replace="~{layout/plantilla :: admin}"/>
+        <section th:replace="~{layout/plantilla :: listadoArbol}"/>
         
-        <footer th:replace="~{layout/plantilla :: footer}"/>   
+        <!-- Test 
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <section th:replace="~{layout/indexinfo :: test}"/> 
+        <footer th:replace="~{layout/plantilla :: footer}"/> -->
     </body>
 </html>
 

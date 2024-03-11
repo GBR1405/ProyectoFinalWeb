@@ -1,9 +1,17 @@
-.Title{
-    font-size: 3em;
-    color: red;
+.Title {
+    font-family: 'Jomhuria';
+    font-size: 4.5em;
+    color: #ff6666;
+    margin: 0;
+    padding: 0;
 }
-.TextV{
+.vertical-text {
     writing-mode: vertical-rl;
     text-orientation: upright;
+    color: yellow;
+}
+.nav-style{
+    font-family: 'Jomhuria';
+    font-size: 2em;
 }
 
