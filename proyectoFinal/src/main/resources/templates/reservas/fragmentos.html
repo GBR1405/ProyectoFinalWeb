@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <title>TicoAsia</title>
+        <meta charset="UTF-8"/>
+        <link href="https://fonts.googleapis.com/css?family=Jomhuria" rel="stylesheet"/>
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <nav th:fragment="reservas">
+            <div class="reservas-form">
+                <h2>Formulario de Reservas</h2>
+                <form th:action="@{/reservas}" th:object="${reserva}" method="post">
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" th:field="*{nombreCompleto}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correoElectronico" th:field="*{correoElectronico}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cantidadPersonas" class="form-label">Cantidad de Personas</label>
+                        <input type="number" class="form-control" id="cantidadPersonas" th:field="*{cantidadPersonas}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                </form>
+            </div>
+        </nav> 
+    </body>
+    <script src="/js/rutinas.js"></script>
+    <script src="/webjars/jquery/jquery.min.
+
+            </html>
