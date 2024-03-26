@@ -82,7 +82,7 @@ h1 {
 /* Estilos para la imagen en especifico */
 .image {
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
     z-index: 2;
 }

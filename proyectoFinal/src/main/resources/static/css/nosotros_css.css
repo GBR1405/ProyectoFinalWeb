@@ -1,0 +1,88 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #292424;
+}
+.Title {
+    font-family: 'Jomhuria';
+    font-size: 4.5em;
+    color: #ff6666;
+    margin: 0;
+    padding: 0;
+}
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: yellow;
+}
+.nav-style{
+    font-family: 'Jomhuria';
+    font-size: 2em;
+}
+
+.figure-img {
+
+    figure-caption-font-size: 500
+        small-font-size;
+    color: black;
+    align-content: center;
+    background-color: black;
+}
+
+container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.text-over-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    color: white;
+    font-family: 'Jomhuria', sans-serif;
+}
+
+@font-face {
+    font-family: 'Jomhuria'; /* Nombre de la fuente */
+    src: url('ruta/a/jomhuria.ttf') format('truetype'); /* Ruta a la fuente */
+    /* Otros formatos de fuentes como woff, woff2, etc. */
+}
+
+h1 {
+    font-size: 70px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Estilos para la imagen en especifico */
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+
