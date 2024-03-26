@@ -40,6 +40,7 @@ container {
     text-align: center;
 }
 
+
 .text-over-image {
     position: absolute;
     top: 50%;
@@ -92,6 +93,7 @@ h1 {
     margin-right: 20px; /* Margen a la derecha */
 }
 
+
 hr.transparente {
     border: none; /* Eliminar el borde predeterminado */
     border-top: 1px solid rgba(0, 0, 0, 0); /* Color semi-transparente negro para la línea */
@@ -100,6 +102,12 @@ hr.transparente {
 .centrar {
     display: flex;
     justify-content: center;
+    z-index: 10;
+}
+
+.right {
+    display: flex;
+    justify-content: right;
     z-index: 10;
 }
 
@@ -114,4 +122,18 @@ hr.transparente {
 
 .increase-space {
     margin-top: 65px;
+}
+
+.text-container {
+    text-align: right;
+    width: 100%;
+}
+
+.nav-styleR {
+    margin-right: 0.5em;
+}
+
+.right {
+    float: right;
+    margin-right: 0%;
 }
