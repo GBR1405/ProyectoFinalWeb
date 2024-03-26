@@ -10,117 +10,9 @@
             <link href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap" rel="stylesheet">
                 <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
                 <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
-
+                <link href="/css/estilos.css" rel="stylesheet" type="text/css"/>
                 <style>
-
-                    html, body {
-                        height: 100%;
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    body {
-                        background-color: #292424;
-                    }
-                    .Title {
-                        font-family: 'Jomhuria';
-                        font-size: 4.5em;
-                        color: #ff6666;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    .vertical-text {
-                        writing-mode: vertical-rl;
-                        text-orientation: upright;
-                        color: yellow;
-                    }
-                    .nav-style{
-                        font-family: 'Jomhuria';
-                        font-size: 2em;
-                    }
-
-                    .figure-img {
-
-                        figure-caption-font-size: 500
-                            small-font-size;
-                        color: black;
-                        align-content: center;
-                        background-color: black;
-                    }
-
-                    container {
-                        display: flex;
-                        align-items: center;
-                        position: relative;
-                        text-align: center;
-                    }
-
-                    .text-over-image {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        z-index: 3;
-                        color: white;
-                        font-family: 'Jim Nightshade', cursive;
-                    }
-
-                    @font-face {
-                        font-family: 'Jim Nightshade'; /* Nombre de la fuente */
-                        src: url('ruta/a/JimNightshade-Regular.ttf') format('truetype'); /* Ruta a la fuente */
-                        /* Otros formatos de fuentes como woff, woff2, etc. */
-                    }
-
-                    h1 {
-                        font-size: 60px;
-                    }
-
-                    .image-container {
-                        position: relative;
-                        display: inline-block;
-
-                    }
-
-                    .image-container::after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0.5);
-                        z-index: 1;
-                    }
-
-                    /* Estilos para la imagen en especifico */
-                    .image {
-                        display: block;
-                        width: 100%;
-                        height: auto;
-                        z-index: 2;
-                    }
-
-                    .margen-lateral {
-                        margin-left: 20px; /* Margen a la izquierda */
-                        margin-right: 20px; /* Margen a la derecha */
-                    }
-
-                    hr.transparente {
-                        border: none; /* Eliminar el borde predeterminado */
-                        border-top: 1px solid rgba(0, 0, 0, 0); /* Color semi-transparente negro para la línea */
-                    }
-
-                    .centrar {
-                        display: flex;
-                        justify-content: center;
-                    }
-                    .btn-personalizado {
-                        background-color: #ff6666; /* Cambiar color de fondo */
-                        border: none; /* Eliminar el borde */
-                        filter: none !important; /* Eliminar el filtro */
-                    }
-
-
+  
 
                 </style>
                 <script th:src="@{/js/rutinas.js}"></script>   
@@ -164,42 +56,40 @@
 
                         </nav>
                         <div class="image-container">
-                            <img src="https://www.hotelmousai.com.mx/blog/wp-content/uploads/2021/11/Chinise-food.jpg" class="figure-img" alt="" width="1263" height="700">
+                            <img src="https://www.hotelmousai.com.mx/blog/wp-content/uploads/2021/11/Chinise-food.jpg" class="figure-img" alt="" width="1263" height="650">
                         </div>
 
                         <div class="container">
-                            <div class="text-over-image">
-                                <hr class="transparente"> <!-- separador -->
+                            <div class="text-over-image increase-space">
+                                <!--<hr class="transparente"> <!-- separador -->
 
-                                    <h2 style="text-align: center">Visite nuestros restaurantes.</h2>
-                                    <h1 style= "text-align: center">Comida asiática estilo chino-costarricense</h1>
+                                <h2 style="text-align: center; font-size: 2.3em" class="nav-style">Visite nuestro restaurante</h2>
+                                <h1 style="text-align: center">Comida asiática</h1>
+                                <h1 style="text-align: center">estilo chino-costarricense</h1>
 
-                                    <h2 style="color: #3c3f41">.</h2> <!--Para hacer espacio entre lineas -->>
+                                    <!--<h2 style="color: #3c3f41">.</h2> <!--Para hacer espacio entre lineas -->
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="65" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+
+                                    <div class="centrar nav-style">
+                                        <button type="button" class="btn-personalizado" disable style="color: white">Ver nuestro menú</button>
+                                    </div>
+
+
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="60" fill="currentColor" class="bi bi-chevron-double-down increase-space" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
                                         <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
                                     </svg>
 
-                                    <div class="centrar">
-                                        <button type="button" class="btn btn-primary btn-personalizado" disabled>Primary button</button>
-                                    </div>
+
                             </div>
                         </div>
-                        <hr>
-                            <div>
-
-                                <p class="margen-lateral" style="color: white; text-align: justify">El restaurante Tico Asia, inaugurado en el año 2019, nace de una innovadora visión de fusionar las ricas tradiciones culinarias de Costa Rica ("lo tico") con la milenaria y diversa gastronomía de China. Esta singular mezcla de sabores y técnicas culinarias es el resultado de la pasión y el esfuerzo de sus propietarios, una familia de origen chino que ha dedicado más de 27 años a perfeccionar el arte de la cocina tica-china.</p> 
-                                <p class="margen-lateral" style="color: white; text-align: justify">La historia de Tico Asia es también la historia de un viaje gastronómico, que comienza con la llegada de esta familia a Costa Rica. A lo largo de casi tres décadas, han sido testigos y partícipes de la evolución de los gustos y preferencias de los comensales, adaptándose y a la vez manteniendo vivas las tradiciones de ambos mundos. En este tiempo, han logrado combinar los ingredientes frescos y vibrantes típicos de la tierra costarricense con las especias, técnicas y sabores distintivos de la cocina china, creando un menú único que trasciende fronteras y culturas.</p> 
-                                <p class="margen-lateral" style="color: white; text-align: justify ">El menú de Tico Asia es un reflejo de esta rica herencia cultural. Los comensales pueden disfrutar de una amplia variedad de platillos que van desde opciones ligeras y saludables hasta preparaciones más elaboradas y robustas, todas ellas caracterizadas por su excepcional equilibrio de sabores. Entre las especialidades de la casa, se encuentran innovadoras creaciones que destacan por su presentación artística y por la fusión de técnicas culinarias que sorprenden gratamente al paladar más exigente.</p>
-
-
-                                <div class="text-center">
-                                    <img src="https://lh5.googleusercontent.com/p/AF1QipOwHGIDLwS2iSgbTT1UU5BD_nvchzMF5S9uQFNZ=w303-h404-p-k-no" class="rounded" alt="...">
-                                </div>
-                                <hr>
-                                    <p class="margen-lateral" style="color: white; text-align: justify ">Con el paso de los años, Tico Asia se ha consolidado como un punto de encuentro para quienes buscan explorar nuevas experiencias culinarias y para aquellos que desean disfrutar de la combinación perfecta entre dos culturas ricas y vibrantes. La visión de sus fundadores, de crear un puente gastronómico entre Costa Rica y China, continúa inspirando cada aspecto del restaurante, asegurando que cada visita sea una aventura para los sentidos y un homenaje a la diversidad y riqueza de la cocina tica-china.</p>
-                            </div>
+                        
+                        <div class="image-container">
+                         
+                            <img src="https://img.freepik.com/premium-photo/chinese-food-noodles-dumplings-stir-fry-chicken-dim-sum-spring-rolls-chinese-cuisine-set-black-background_89816-14990.jpg?w=900" class="figure-img" alt="" width="1262" height="650">
+                        </div>
+                     
 
                     </header>
 
