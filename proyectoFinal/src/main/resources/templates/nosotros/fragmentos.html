@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <title>TicoAsia</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://fonts.googleapis.com/css?family=Jomhuria" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap" rel="stylesheet">
+                <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+                <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+                <script th:src="@{/js/rutinas.js}"></script>   
+                <script th:src="@{/webjars/jquery/jquery.min.js}"></script>   
+                <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script> 
+                <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+                </head>
+                <body>
+
+                    <section th:fragment="nosotros">
+                        <nav>
+                        </nav>
+                        <div class="image-container">
+                            <img src="https://i.blogs.es/6f6a92/verduras-salteadas-estilo-chino/1366_2000.jpg" class="figure-img" alt="">
+                        </div>
+
+                        <div class="container">
+                            <div class="text-over-image">
+                                <h1 style= "text-align: center">Acerca de nosotros</h1>
+                                <h2 style="text-align: center">Una mezcla entre cultura, sabores y tradiciones.</h2>
+                                <h2 style="color: #3c3f41">.</h2> <!--Para hacer espacio entre lineas -->
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="800" height="65" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                                    <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                                </svg>
+
+                            </div>
+                        </div>
+                        <hr>
+                            <div>
+
+                                <p class="margen-lateral" style="color: white; text-align: justify">El restaurante Tico Asia, inaugurado en el año 2019, nace de una innovadora visión de fusionar las ricas tradiciones culinarias de Costa Rica ("lo tico") con la milenaria y diversa gastronomía de China. Esta singular mezcla de sabores y técnicas culinarias es el resultado de la pasión y el esfuerzo de sus propietarios, una familia de origen chino que ha dedicado más de 27 años a perfeccionar el arte de la cocina tica-china.</p> 
+                                <p class="margen-lateral" style="color: white; text-align: justify">La historia de Tico Asia es también la historia de un viaje gastronómico, que comienza con la llegada de esta familia a Costa Rica. A lo largo de casi tres décadas, han sido testigos y partícipes de la evolución de los gustos y preferencias de los comensales, adaptándose y a la vez manteniendo vivas las tradiciones de ambos mundos. En este tiempo, han logrado combinar los ingredientes frescos y vibrantes típicos de la tierra costarricense con las especias, técnicas y sabores distintivos de la cocina china, creando un menú único que trasciende fronteras y culturas.</p> 
+                                <p class="margen-lateral" style="color: white; text-align: justify ">El menú de Tico Asia es un reflejo de esta rica herencia cultural. Los comensales pueden disfrutar de una amplia variedad de platillos que van desde opciones ligeras y saludables hasta preparaciones más elaboradas y robustas, todas ellas caracterizadas por su excepcional equilibrio de sabores. Entre las especialidades de la casa, se encuentran innovadoras creaciones que destacan por su presentación artística y por la fusión de técnicas culinarias que sorprenden gratamente al paladar más exigente.</p>
+
+
+                                <div class="text-center">
+                                    <img src="https://lh5.googleusercontent.com/p/AF1QipOwHGIDLwS2iSgbTT1UU5BD_nvchzMF5S9uQFNZ=w303-h404-p-k-no" class="rounded" alt="...">
+                                </div>
+                                <hr>
+                                    <p class="margen-lateral" style="color: white; text-align: justify ">Con el paso de los años, Tico Asia se ha consolidado como un punto de encuentro para quienes buscan explorar nuevas experiencias culinarias y para aquellos que desean disfrutar de la combinación perfecta entre dos culturas ricas y vibrantes. La visión de sus fundadores, de crear un puente gastronómico entre Costa Rica y China, continúa inspirando cada aspecto del restaurante, asegurando que cada visita sea una aventura para los sentidos y un homenaje a la diversidad y riqueza de la cocina tica-china.</p>
+                            </div>
+
+                    </section>
+                </body>
+                </html>
+
+

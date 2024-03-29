@@ -1,0 +1,87 @@
+/* Set the width of the sidebar */
+.sidebar {
+    width: 200px;
+}
+
+/* Position the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    /* Make the sidebar scrollable when there is a lot of content */
+    padding: 0;
+    /* No padding */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    z-index: 999;
+    /* Ensure the sidebar is on top of other content */
+}
+
+/* Style the links inside the sidebar */
+.sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Add a background color to the active/current link */
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Add a hover effect to the links inside the sidebar */
+.sidebar a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Style the toggle button */
+.sidebar-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Style the toggle button when the sidebar is open */
+.sidebar.active .sidebar-toggle {
+    display: none;
+}
+
+/* Add a left margin to the content */
+.content {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* Style the close button */
+.close-sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
