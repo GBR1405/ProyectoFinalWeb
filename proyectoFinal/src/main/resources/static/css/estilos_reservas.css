@@ -1,0 +1,33 @@
+/* Establecer imagen de fondo */
+.reservas {
+    background-image: url('https://img.freepik.com/foto-gratis/comida-tradicional-asiatica-caja_23-2148771246.jpg?t=st&exp=1711785976&hmac=2da20fd67722bf9e1de7d32fd47e4a248fff02f5520a043f8cbc832a601eee61&w=740');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Ajustar tamaño de los campos de entrada */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    box-sizing: border-box;
+}
+
+/* Ajustar tamaño del botón */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para el título del formulario */
+.reservas h2 {
+    color: #fff;
+    text-align: center;
+}

@@ -1,4 +1,4 @@
-package proyectoFinal.domain;
+package com.proyectoFinal.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,8 +12,8 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "reservar")
-public class Reservar implements Serializable {
+@Table(name = "reservas")
+public class Reservas implements Serializable {
     private static final long serialVersionUID = 1L;
     
     @Id 
@@ -31,4 +31,3 @@ public class Reservar implements Serializable {
     private int cantidadPersonas;
     
 }
-
