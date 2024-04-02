@@ -8,37 +8,45 @@
         <link href="https://fonts.googleapis.com/css?family=Jomhuria" rel="stylesheet"/>
         <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
         <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
-        <link rel="stylesheet" type="text/css" th:href="@{static/estilos_reservas.css}" />
+        <script th:src="@{/js/rutinas.js}"></script>   
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>   
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script> 
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/estilos_reservas.css" />
+
     </head>
     <body>
+        <div class="image-container">        
+            <img src="https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/04/19/dumplings.jpeg"  class="figure-img" alt="" width="1263" height="650"></img>
+        </div>
         <section th:fragment="forms">
-            <div class="reservas">
-                <h2>Formulario de Reservas</h2>
-                <div class="cuadro">
-                    <div class="txtgrande" color="white">Formulario de Reservas</div>
-
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="correoElectronico" placeholder="nombre@ejemplo.com"/>
-                        <label for="correoElectronico">Correo electrónico</label>
-                    </div>
-
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Nombre Completo"/>
-                        <label for="nombreCompleto">Nombre completo</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="number" class="form-control" id="cantidadPersonas" placeholder="Cantidad de Personas"/>
-                            <label for="cantidadPersonas">Cantidad de Personas</label>
-                    </div>
-
-                    <div class="form-check-container">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                            <label class="form-check-label" for="flexCheckDefault">Acepto los términos y condiciones de nuestra política.</label>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-primary btn-danger custom-btn">Confirmar</button>
+            <div class="container" style="background-color: black; border-radius: 10px;">
+                <div class="reservas">
+                    <h2 class="titulo-formulario" style="color: gray; text-align: center;">Bienvenid@,<br/>¿Cuál mesa te gustaría reservar?</h2><br/>
+                    <div class="cuadro">
+                        <form th:action="@{/reservas/guardar}" method="post">
+                            <div class="form-group">
+                                <label for="nombreCompleto" style="color: white;"></label>
+                                <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" placeholder="Nombre Completo"/><br/>
+                            </div>
+                            <div class="form-group">
+                                <label for="correoElectronico" style="color: white;"></label>
+                                <input type="email" class="form-control" id="correoElectronico" name="correoElectronico" placeholder="Correo Electrónico"/><br/>
+                            </div>
+                            <div class="form-group">
+                                <label for="cantidadPersonas" style="color: white;"></label><br/>
+                                <input type="number" class="form-control" id="cantidadPersonas" name="cantidadPersonas" placeholder="Cantidad de Personas"/>
+                                <p style="color: white;">El mínimo de personas debe ser de 6 personas por mesa</p><br/>
+                            </div>
+                            <div class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                                <label class="form-check-label" for="flexCheckDefault" style="color: white;">Acepto los términos y condiciones de nuestra política.</label><br/><br/>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-danger custom-btn">Confirmar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

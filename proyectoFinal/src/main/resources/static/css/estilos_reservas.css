@@ -1,11 +1,21 @@
-/* Establecer imagen de fondo */
-.reservas {
-    background-image: url('https://img.freepik.com/foto-gratis/comida-tradicional-asiatica-caja_23-2148771246.jpg?t=st&exp=1711785976&hmac=2da20fd67722bf9e1de7d32fd47e4a248fff02f5520a043f8cbc832a601eee61&w=740');
+body {
+    background-image: url("https://img.freepik.com/fotos-premium/mesa-llena-comida-china-incluidos-dumplings-otros-alimentos_920594-30751.jpg");
     background-size: cover;
     background-position: center;
+    font-family: 'Jomhuria', sans-serif;
 }
 
-/* Ajustar tamaño de los campos de entrada */
+.container {
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-group label {
+    color: white;
+    width: auto;
+}
+
 .form-control {
     width: 100%;
     padding: 10px;
@@ -15,19 +25,19 @@
     box-sizing: border-box;
 }
 
-/* Ajustar tamaño del botón */
-.btn {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.form-group p {
+    color: white;
+    margin-top: 5px;
 }
 
-/* Estilo para el título del formulario */
-.reservas h2 {
-    color: #fff;
-    text-align: center;
+.form-check-label {
+    color: white;
+}
+
+.btn-custom {
+    background-color: #ff6666;
+    border: none;
+    height: 35px;
+    padding: 1px 20px;
+    font-size: 1.5em;
 }
