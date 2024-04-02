@@ -1,0 +1,86 @@
+.afiliarse{
+    position: relative;
+    width: 1512px;
+    height: 982px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+}
+section{
+     position: relative;
+    z-index: 1; /* Asegura que la sección esté encima de la imagen */
+}
+
+.cuadro{
+    position: absolute;
+    width: 1200px;
+    height: auto;
+    left: 50%;
+    
+    top: 120px;
+    transform: translateX(-50%);
+    background: rgba(217, 217, 217, 0.8);
+    border-radius: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.txtgrande{
+    position: relative;
+    width: 672px;
+    height: 180px;
+    left: calc(50% - 672px/2);
+    top: 30px;
+
+    font-family: 'Jomhuria';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 80px;
+    line-height: 70px;
+    text-align: center;
+
+    color: rgba(41, 36, 36, 0.7);
+    margin-bottom: 40px;
+}
+.cuadro .form-floating {
+    margin-bottom: 15px;
+}
+.cuadro .form-floating input.form-control {
+    height: auto;
+    font-size: 16px;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    width: 1100px;
+    min-height: 60px;
+}
+
+
+.form-check {
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+.custom-btn {
+    padding: 0.8rem 2rem; /* Aumenta el relleno para hacer el botón más grande */
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    /*z-index:-1;*/
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
