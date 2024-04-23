@@ -5,6 +5,7 @@ html, body {
 }
 
 body {
+    
     background-color: #292424;
 }
 .Title {
@@ -23,6 +24,12 @@ body {
     font-family: 'Jomhuria';
     font-size: 2em;
 }
+
+.nav-style2{
+    font-family: 'Jomhuria';
+    font-size: 3em;
+}
+
 
 .figure-img {
 
@@ -53,8 +60,7 @@ container {
 
 @font-face {
     font-family: 'Jim Nightshade'; /* Nombre de la fuente */
-    src: url('ruta/a/JimNightshade-Regular.ttf') format('truetype'); /* Ruta a la fuente */
-    /* Otros formatos de fuentes como woff, woff2, etc. */
+    src: url('ruta/a/JimNightshade-Regular.ttf') format('truetype'); 
 }
 
 h1 {
@@ -154,4 +160,43 @@ section{
     bottom: 20px;
     width: 80%; 
 }
+
+aside{
+    position: static;
+    top: 70px;
+    left: 0;
+    bottom: 20px;
+    width: 50%;    
+}
+
+.text-over-image2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+/*    justify-self: center;*/
+    right: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: white;
+}
+
+.elemento-1 {
+  position: absolute; /* establece el posicionamiento absoluto del elemento 1 */
+  top: 0; /* posiciona el elemento 1 en la parte superior del aside */
+  left: 0; /* posiciona el elemento 1 a la izquierda del aside */
+  width: 15%; /* establece el ancho del elemento 1 */
+  height: 15%; /* establece la altura del elemento 1 */
+  
+  
+}
+
+.elemento-2 {
+  position: static; /* establece el posicionamiento absoluto del elemento 2 */
+  top: 0; /* posiciona el elemento 2 en la parte superior del aside */
+  right: 0; /* posiciona el elemento 2 a la derecha del aside */
+  width: 15%; /* establece el ancho del elemento 2 */
+  height: 15%; /* establece la altura del elemento 2 */
+  
+}
+
 
